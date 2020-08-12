@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Luckiest+Guy&display=swap');
+ 
+ 
+/**********************************
+Seletores de elementos, exemplos:
+- body
+- h1
+- h2
+- img
+***********************************/
+body {/*corpo da página*/
+   color: brown; /*Cor do texto*/
+   background-color: bisque; /*Cor do fundo*/
+   text-shadow: 2px 2px 5px black; /*Sombra*/
+}
+ 
+h1 {/*Cabeçalho H1*/
+   color: darkred;/*Cor do texto*/
+   font-family: 'Luckiest Guy', cursive;
+   font-size: 300%;
+   text-shadow: 3px 3px 5px black;
+   text-align: center;
+}
+ 
+/*Seletor h2*/
+h2 { /*Propriedades do h2*/
+   font-family: 'Dancing Script', cursive;
+   font-size: 150%;
+   text-align: center;
+}
+ 
+/*Seletor de Classe*/
+/*Para selecionar um grupo de elementos*/
+/*Classe usa-se o PONTO*/
+img.logo {
+   height: 200px;
+   width: 200px;   
+   margin-left: 170px;   
+   border-radius: 50%; /*Arredondando*/
+   transition: 0.5s;
+}
+ 
+img.logo:hover {
+   /* :hover => Ativado ao passar o mouse por cima*/
+   box-shadow: 0 0 10px black;
+}
+/*Seletor de Identificaodr*/
+/*Identificador de apenas um elemento, usa-se a HASH*/
+img#imgPrincipal {
+   /*Centralização da Imagem*/
+   display: block;
+   margin:0 auto;
+   border-radius: 10px;
+   box-shadow: 0 0 10px black;
+}
+ 
+em.vermelho {
+   color: red;
+
+   <style>
+       /*Pedaço de CSS dentro do HTML*/
+       body {
+           background-color: blue;
+           color: cyan;
+       }
+
+}
+
+  
