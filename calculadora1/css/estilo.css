@@ -1,0 +1,81 @@
+/*Reset de formatação*/
+html{box-sizing: border-box;}
+*, *:before, *:after{box-sizing: inherit;}
+ 
+body{
+   background-color: #000;
+   color: lime;
+   padding: 0;
+   margin: 0;
+}
+
+h1{   text-align: center; }
+/*Principal - main*/
+.container {
+    width: 400px;
+    background-color: lavender;
+    color: white;
+    margin: 0 auto;/*Centralização*/
+    border: 5px ridge white;
+ }
+
+/*Tela - screen*/
+.screen {
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    text-align: right;
+    padding: 20px 5px;
+ }
+
+/*Fileira de Botões*/
+.calc-button-row {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    margin-bottom: 0.5%;
+ }
+
+ /*Botões*/
+ .calc-button{
+    background-color: #d8d9db;
+    color: black;
+    height: 100px;
+    flex-basis: 24.5%; /*100% / 4 = 25%*/
+    border: none;
+    border-radius: 2px;
+    font-size: 40px;
+    cursor: pointer;
+ }
+
+/*Ao passar o mouse por cima (hover)*/
+.calc-button:hover{background-color:#ebebeb;}
+/*Ao clicar no botão*/
+.calc-button:active{background-color: #bbbcbe;}
+/*Botão que ocupa o espaço de dois*/
+.double{flex-basis: 49.7%} /*2 vezes 25%*/
+/*Botão que ocupa o espaço de três*/
+.triple{flex-basis: 74.8%;} /*3 vezes 25%*/
+/*Ajustes do último botão de cada fileira*/
+
+.calc-button:last-child{
+    background-color: #df974c;
+    color: white;
+ }
+ /*Ao passar o mouse por cima - hover*/
+ .calc-button:last-child:hover{
+    background-color: #dfb07e;
+ }
+ /*Ao clicar com o mouse - active*/
+ .calc-button:last-child:active{
+    background-color: #dd8d37;
+ }
+ .calc-button-row:last-child{padding-bottom: 0;}
+    
+body{
+    background-color:black;
+    color: lawngreen;
+ }
+
+ 
