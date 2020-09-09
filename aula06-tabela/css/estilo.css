@@ -1,0 +1,78 @@
+body {
+   background-color: black;
+   color: cyan;
+}
+
+li a { /*Mudar a cor dos links*/
+   color: cyan;
+   text-decoration: none;
+
+}
+li a:hover { /*Ao passar o mouse por cima*/
+   color: yellowgreen;
+
+}
+li a:active { /*Ao clicar com o mouse*/
+   color: yellow;
+}
+
+li a, footer h2 a { /*Mudar a cor dos links*/
+   color: cyan;
+
+}
+
+footer h2 a {
+   border:2px ridge beige;
+   background-color: bisque;
+   color: brown;
+   padding: 5px;
+   border-radius: 3px;
+}
+footer h2 a:hover {
+   border: 2px ridge bisque;
+   background-color: beige;
+   color: brown;
+}
+ 
+footer h2 a:active {
+   background-color: white;
+   box-shadow: 0 0 5px white;
+}
+
+table#tabela01 {
+   border: 2px solid white;
+   border-collapse: collapse;
+   background-color: ivory;
+   color: black;
+}
+
+#tabela01 td {
+   border: 1px dashed brown;
+   padding: 10px;
+}
+
+#tabela01 tr:nth-child(even) {
+background-color: yellow;
+}
+
+table#tabela02 {
+   background-color: white;
+   padding: 5px;
+   color: black;
+   width: 420px;
+   border-collapse: collapse; /*Junta as linhas*/
+}
+ 
+#tabela02 td, #tabela02 th {
+   border: 1px solid black;
+   text-align: center;
+   height: 30px;
+}
+ 
+#tabela02 th {
+   background-color:cadetblue;
+}
+ 
+#tabela02 tr:nth-child(even) {
+   background-color: aliceblue;
+}
