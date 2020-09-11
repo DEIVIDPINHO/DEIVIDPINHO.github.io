@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+    <style>
+        .quadrado-vermelho{
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+        }
+        #caixaColorida {
+           background-color: lightgreen;
+           width: 200px;
+           height: 200px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Dom - Document Object Model</h1>
+    <h2>Modelo Objeto do Docuemento</h2> 
+    
+    <!--Divisão ou pedacinho de página-->
+    <div class="quadrado-vermelho"></div>
+
+    <h2>Elemento de uma lista</h2>
+    <ul>
+        <li class="alvo-js">Inalterado</li>
+        <li class="alvo-js">Inalterado</li>
+        <li>Não Mudará 1</li>
+        <li class="alvo-js">Inalterado</li>
+        <li>Não Mudará 2</li>
+    </ul>
+
+    <h2>Eventos e escutas</h2>
+    <button id="evento-btn">Clique em mim</button>
+
+    <h2>Manipulando entrada e escrevendo no documento</h2>
+   <input type="text" id="entrada" placeholder="Escreva algo.">
+   <h3 id="visor" style="background-color: darkgreen; color: yellow;">
+       Não escreveu nada ainda!
+   </h3>
+
+   <H2>Escrevendo a cor do quadrado</H2>
+   <div id="caixaColorida"></div>
+   <input type="text" id="entradaCor" placeholder="Digite o nome da cor">
+
+   <h2>Delegar eventos</h2>
+   <div class="container">
+       <button>1</button>
+       <button>2</button>
+       <button>3</button>
+       <button>4</button>
+       <button>5</button>
+   </div>
+
+   <script>
+        //Mudar a cor do quadrado vermelho
+        //usando Javascript
+        const quadrado = document.querySelector('.quadrado-vermelho');
+        quadrado.style.backgroundColor = 'limegreen';
+
+        //Elementos da Lista
+       const elementosListaMudar = document.querySelectorAll('.alvo-js');
+       // .length é o tamanho da lista, neste caso = 3
+       for (let i = 0; i < elementosListaMudar.length; i++){
+           const elementoAtual = elementosListaMudar[i];
+           elementoAtual.innerText = "Modificado no Javascript " + (i+1);
+       }
+
+       //Eventos e escutas
+        const btn = document.querySelector('#evento-btn');
+
+        //Função de chamada (call-back)
+        function escuta() {
+            alert('Alo Ha! Botão clicado');
+        }
+        //Adicionando uma escuta ao evento
+        btn.addEventListener('click', escuta);
+
+        //Manipulando entrada e saida no DOM
+        const entrada = document.querySelector('#entrada');
+        const visor = document.querySelector('#visor');
+
+        entrada.addEventListener('keyup', function() {
+            visor.innerText = entrada.value;
+
+       });
+
+       //alterando a cor da caixa
+       const caixaColorida = document.querySelector('#caixaColorida');
+       const cor = document.querySelector('#entradaCor');
+       //adicionando a escuta
+       cor.addEventListener('change', function() {
+           caixaColorida.style.backgroundColor = cor.value;
+       });
+
+      //Delegar eventos
+      document.querySelector('.container').addEventListener('click',
+       function(evento){
+           alert(`Você clicou no botão ${evento.target.innerText}`);
+           visor.innerText = evento.target.innerText;
+       });
+    </script>
+</body>
+</html>
