@@ -1,0 +1,21 @@
+body {
+    background-color: cyan;
+    color: black;
+}
+
+table {
+    text-align: center;
+    color: black;
+    background-color: blue;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid white;
+    padding: 7px;
+    width: 200px;
+}
+
+td:hover {background-color:cyan;
+}
+
