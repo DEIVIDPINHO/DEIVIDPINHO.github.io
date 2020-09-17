@@ -1,0 +1,88 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: chartreuse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: chartreuse;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+/*Estilização do Placar*/
+.placar {
+    margin: 20px auto;/*Centralizar a caixa*/
+    border: 3px solid whitesmoke;
+    border-radius: 4px;/*arredondamento das bordas*/
+    text-align: center;
+    width: 200px;
+    font-size: 42px;
+    padding: 15px 20px;
+    position: relative;
+}
+.badge {
+    background-color: lightgreen;
+    font-size: 14px;
+    padding: 2px 15px;
+    color: black;
+}
+#jogador {
+    position: absolute;
+    top: 30px;
+    left: -47px;
+}
+#computador {
+    position: absolute;
+    top: 30px;
+    right: -37px;
+}
+ 
+.resultado {
+    font-size: 40px;
+    font-weight: bold; /*Negrito*/
+    text-align: center;
+}
+
+.escolhas {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.escolha {
+    border: 4px solid chartreuse;
+    border-radius: 50%;
+    font-size: 42px;
+    padding: 10px;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.escolha:hover { /*passar com o mouse*/
+    background-color:limegreen;
+    cursor: pointer;
+}
+
+.escolha:active { /*clicar com o mouse*/
+    background-color: cadetblue;
+}
+
+#jogada {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+ 
+ 
+ 
