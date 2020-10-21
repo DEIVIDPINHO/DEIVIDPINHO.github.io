@@ -1,0 +1,119 @@
+/*Variáveis do CSS na raiz do documento*/
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+  
+/*Ressetando o CSS padrão*/
+* {
+    margin: 0;
+    padding: 0;
+    /*Tamanho da caixa definido pelo programador*/
+    box-sizing: border-box;
+}
+
+/*Estilizando o corpo da página*/
+body {
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff; /*Cor branca*/
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; /*Negrito - Vermelhita*/
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+    cursor: pointer;
+}
+  
+header nav a:hover { /*Ao passar o mouse por cima*/
+    color: #fff;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Estilizando a parte Principal*/
+.container {
+    margin-left: 20px;
+}
+ 
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%),
+        url('../img/house-of-cards.jpg');
+    height: 400px;
+    background-size: cover;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+  
+.titulo {
+    font-size: 40px;
+    margin-top: 15%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Estilizando os botões*/
+.filme-principal .container {
+    width: 50%;
+}
+.botao {
+    background-color: rgba(0,0,0,.40); /*40% de opacidade*/
+    border: none;
+    color: #fff;
+    padding: 15px 30px; /*15px em cima e embaixo e 30px dos lados*/
+    margin-right: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 300ms ease all;
+}
+  
+.botao:hover {
+    background-color: #fff;
+    color: var(--preto);
+}
+
+/*Responsividade - Melhorar a visão em telas pequenas*/
+@media screen and (max-width: 800px){
+    header .container {
+        flex-direction: column;
+    }
+    header .logo {
+        font-size: 24px;
+    }
+    .botao {
+        margin-top: 5px;
+        width: 190px;
+        height: 60px;
+    }
+    .filme-principal {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+ }
+ 
+ 
+ 
+ 
+ 
