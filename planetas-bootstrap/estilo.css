@@ -1,0 +1,22 @@
+article img {
+    height: 300px !important; /*Para caber três imagens*/
+    width: 95%;
+}
+.card {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    transition: all 300ms;
+}
+.card:hover {
+    box-shadow: 0 0 10px gray;
+}
+.card-body h3 {
+    margin-top: 15px;
+}
+
+.modal-content {
+    width: 600px;
+}
+ 
+ 
+ 
